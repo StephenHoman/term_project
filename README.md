@@ -1,37 +1,70 @@
- web application that facilitates the buying and selling of used books and other educational good. It involves two sets of users, namely, admin and general users. Admins are responsible for adding the products, description and price of the product to the database. While, general users can browse through all the products listed in the application, add the product to the cart, pay for the products bought via third party tender/payment gateways(examples:- Authorize.net, Paypal, Amazon Payments, etc) and order the product.
+# Getting Started with Create React App
 
-The following requirements of the application was obtained from the business analyst and potential customers:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-    Both Admin and General Users will be able to create an account for themselves.
-    Both Admin and GeneralUsers will be able to edit their account information.
-    Both Admin and General Users will be able to browse through all the products available.
-    Both Admin and General Users will be able to check the price and description of the product as well as see the picture of the product.
-    Both Admin and General Users will be able to add one or more products to the shopping cart.
-    Both Admin and General Users will be able to view products in the cart.
-    Both Admin and General Users will be able to remove products from the cart.
-    Both Admin and General Users will be able to order and pay for the products bought.
-    Both Admin and General Users will be able to download the invoice for the order.
-    Only Admin Users will be able to add/remove product in the database.
-    Only Admin Users will be able to edit a product in the database.
+## Available Scripts
 
-Term Project objective
+In the project directory, you can run:
 
-Students will create a professional website based on the above requirements while utilizing the technical specifications for each model.
+### `npm start`
 
-The student will be in charge of setting the project goals, giving stylistic direction and providing all the content for the site. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Grading Criteria:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-5 - 10 Unique Pages
+### `npm test`
 
-    Valid XHTML
-    External CSS
-    Original Text
-    Original Graphic Design*
-    No Broken Links
-    Proper Use of HTML Tags
-    Appropriate and Useful Content
-    Access to data in a database
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-*Public domain art may be used if appropriate for the project.
- 
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
