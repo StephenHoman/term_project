@@ -1,4 +1,4 @@
-import React from 'react';
+ 
 import React, { useState } from 'react';
 import ColoredLine from './coloredline.js';
 import CreateAccount from './createAccount.js';
