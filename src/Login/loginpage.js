@@ -81,7 +81,7 @@ function LoginPage() {
   return (
     <div>
       {isLoggedIn ? (
-        <HomePage user={user} setIsLoggedIn={setIsLoggedIn} />
+        <HomePage user={user} setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
       ) : (
         <LoginForm onLogin={handleLogin} user={null} />
       )}

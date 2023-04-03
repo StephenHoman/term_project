@@ -1,22 +1,31 @@
 import React, { useState } from 'react';
 import LoginPage from '../Login/loginpage.js';
-
+import Navbars from './navbar.js';
+import MainPageContainer from './homepagecontainer.js';
+import Heroimage from './heroImage.js';
+import Footer from './Footer.js';
 function HomePage() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [user, setUser] = useState(null);
-
+ 
   const handleLogin = (user) => {
   setIsLoggedIn(true);
   setUser(user);
- 
+  
+  
 };
-
+ 
   return (
+ 
     <div>
       {isLoggedIn ? (
         <div>
-          <h1>Welcome to My App,{user} !</h1>
-          <p>Thank you for logging in.</p>
+          <div> <Navbars /> </div>
+          <div>  <Heroimage /> </div>
+          <div> <MainPageContainer /> </div>
+          <h1> hello {user}</h1>
+          <div> <Footer /> </div>
+           
         </div>
       ) : (
         <div>
