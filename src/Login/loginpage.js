@@ -9,7 +9,6 @@ function LoginPage(props) {
   return (
     <div>
       <LoginForm onLogin={handleLogin} />
-      
     </div>
   );
 }

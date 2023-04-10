@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route  } from 'react-router-dom';
 import LoginPage from './Login/loginpage.js';
 import HomePage from './HomePage/homepage.js';
 import Computers from './pages/Computers.js';
@@ -32,17 +32,18 @@ function App() {
     setUser(null);
     localStorage.removeItem('auth');
   };
+ 
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={isLoggedIn ? <HomePage user={user} onLogout={handleLogout} /> : <LoginPage onLogin={handleLogin} />} />
-        <Route path="/computers" element={<Computers />} />
-        <Route path="/supplies" element={<Supplies />} />
-        <Route path="/apparel" element={<Apparel />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/cart" element={<Cart />} />
+ 
+        <Route path="/" element={isLoggedIn ? <HomePage user={user} onLogout={handleLogout} /> : <LoginPage onLogin={handleLogin} />} />
+        <Route path="/computers" element={isLoggedIn ? <Computers />: <LoginPage onLogin={handleLogin} />} />
+        <Route path="/supplies" element={isLoggedIn ? <Supplies />: <LoginPage onLogin={handleLogin} />} />
+        <Route path="/apparel" element={isLoggedIn ? <Apparel />: <LoginPage onLogin={handleLogin} />} />
+        <Route path="/books" element={isLoggedIn ? <Books />: <LoginPage onLogin={handleLogin} />} />
+        <Route path="/cart" element={isLoggedIn ? <Cart />: <LoginPage onLogin={handleLogin} />} />
       </Routes>
       {isLoggedIn ? <Navbars isLoggedIn={isLoggedIn} onLogout={handleLogout} /> : null}
     </BrowserRouter>
