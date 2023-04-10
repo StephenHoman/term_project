@@ -11,7 +11,7 @@ function Imgcard1(props) {
         <Card.Text>
           {props.text}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary" href={props.route}>Go somewhere</Button>
       </Card.Body>
     </Card>
   );

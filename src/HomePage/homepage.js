@@ -1,35 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useCookies } from 'react-cookie';
 import LoginPage from '../Login/loginpage.js';
-import Navbars from './navbar.js';
+ 
 import MainPageContainer from './homepagecontainer.js';
 import Heroimage from './heroImage.js';
 import Footer from './Footer.js';
-function HomePage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+function HomePage(props) {
+  const [cookies, setCookie ] = useCookies(['isLoggedIn', 'user']);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
- 
+
+  useEffect(() => {
+    const loggedIn = cookies.isLoggedIn === 'true';
+    setIsLoggedIn(loggedIn);
+    setUser(loggedIn ? cookies.user : null);
+  }, [cookies]);
+
   const handleLogin = (user) => {
-  setIsLoggedIn(true);
-  setUser(user);
-  
-  
-};
- 
+    setIsLoggedIn(true);
+    setUser(user);
+    setCookie('isLoggedIn', 'true', { path: '/' });
+    setCookie('user', user, { path: '/' });
+  };
+
+   
+
   return (
- 
     <div>
       {isLoggedIn ? (
         <div>
-          <div> <Navbars /> </div>
-          <div>  <Heroimage /> </div>
-          <div> <MainPageContainer /> </div>
-          <h1> hello {user}</h1>
-          <div> <Footer /> </div>
-           
+         
+          <div><Heroimage /></div>
+          <div><MainPageContainer /></div>
+          <h1>Hello {user.email}</h1>
+          <div><Footer /></div>
         </div>
       ) : (
         <div>
-          <h1>Please log in to continue</h1>
           <LoginPage onLogin={handleLogin} />
         </div>
       )}

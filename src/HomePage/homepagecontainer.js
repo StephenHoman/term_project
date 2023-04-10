@@ -13,22 +13,22 @@ function MainPageContainer() {
     <Container fluid className={styles['Container-style']}>
       <Row className="justify-content-center">
         <Col  xs lg="6">
-          <Imgcard1 src={laptop} title="Computers" text="Browse Computers"/>
+          <Imgcard1 src={laptop} title="Computers" text="Browse Computers" route="/computers"/>
         </Col>
        
        
         <Col xs lg="6">
-        <Imgcard1 src={supplies} title="School supplies" text="Assorted writing tools"/>
+        <Imgcard1 src={supplies} title="School supplies" text="Assorted writing tools" route="/supplies"/>
         </Col>
       </Row>
       <Row className="justify-content-center">
         <Col  xs lg="6">
-          <Imgcard1 src={clothes} title="University Apparel" text="Browse branded clothes"/>
+          <Imgcard1 src={clothes} title="University Apparel" text="Browse branded clothes" route="/apparel"/>
         </Col>
        
        
         <Col xs lg="6">
-        <Imgcard1 src={books} title="Books" text="Get required course material here!"/>
+        <Imgcard1 src={books} title="Books" text="Get required course material here!" route="/books"/>
         </Col>
       </Row>
     </Container>
