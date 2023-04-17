@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import LoginPage from '../Login/loginpage.js';
- 
 import MainPageContainer from './homepagecontainer.js';
 import Heroimage from './heroImage.js';
 import Footer from './Footer.js';
